@@ -1,0 +1,57 @@
+/* Espaciado */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Cuerpo página */
+body{
+    background: url(../Img/Fondo1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+    
+.container-r{
+    width: 70%;
+    max-width: 200%;
+    color: #000000;
+    padding: 50px 35px;
+    border: 1px solid rgba(255,255, 255, 0.70);
+    background: rgba(255, 255, 255, 0.70);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.content-r.card-body.form,.form-control{
+    background: rgba(0,0,255,.1);
+    border: none;
+    outline: none;
+    border-bottom: 2px solid  #000000;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #030303;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Botón */
+.boton{
+    display: inline-block;
+    margin-top: 16px;
+    text-decoration: none;
+    background: #1a84d3;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}

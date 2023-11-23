@@ -1,0 +1,63 @@
+/* Cuerpo */
+
+body {
+  margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../Img/Logo2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  height: 100vh;
+}
+
+/* Marca de Agua */
+#watermark {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.5;
+  z-index: 99;
+  color: white;
+}
+
+/* Tabla */
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px;
+}
+
+thead th:nth-child(1) {
+  width: 25%;
+}
+
+thead th:nth-child(2) {
+  width: 15%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 10%;
+}
+thead th:nth-child(5) {
+  width: 10%;
+}
+thead th:nth-child(6) {
+  width: 10%;
+}
+
+thead th:nth-child(7) {
+  width: 8%;
+}
+
+th,
+td {
+  padding: 5px;
+}

@@ -1,0 +1,56 @@
+/* Cuerpo página */
+body {
+  margin-bottom: 60px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../Img/Inicio.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 400%;
+  color: #000000;
+  padding: 50px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Titulo {
+  margin-top: 16px;
+  margin-right: 20px;
+  margin-bottom: 9px;
+  margin-left: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.card.content.card-body.form,
+.form-control {
+  background: rgba(0, 0, 255, 0.1);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #030303;
+  font-family: "Roboto", sans-serif;
+}
+
+.card.content.card-body.form,
+.form-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: #fff;
+}
+.card.content.card-body.form,
+.form-control.img {
+  background-color: transparent;
+}

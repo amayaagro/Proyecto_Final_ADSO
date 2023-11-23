@@ -1,0 +1,83 @@
+/* Espaciado */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Cuerpo página */
+body {
+  background: url(../Img/Fondo1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-r {
+  width: 70%;
+  max-width: 200%;
+  color: #000000;
+  padding: 50px 35px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.content-r.card-body.form,
+.form-control {
+  background: rgba(0, 0, 255, 0.1);
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000000;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.content-r.card-body.form,
+.form-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px white;
+}
+
+#cancelar {
+  margin-top: 30px;
+  background: #c21b09;
+  border-radius: 20px;
+  box-shadow: 5px 5px #b2babb;
+  color: white;
+  width: 110px;
+  height: 45px;
+  font-size: 17px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#guardar {
+  margin-top: 30px;
+  background: rgb(85, 107, 47);
+  border-radius: 20px;
+  box-shadow: 5px 5px #b2babb;
+  color: white;
+  width: 110px;
+  height: 47px;
+  font-size: 17px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 100;
+}
