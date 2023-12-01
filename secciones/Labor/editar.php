@@ -35,37 +35,30 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Editar Labor -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Modificar Labor</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Modificar Datos Labor</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="txtId" class="form-label">Id</label>
-                    <input type="text" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId" id="txtId" aria-describedby="helpId" placeholder="ID">
+                    <input type="text" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId"
+                        id="txtId" aria-describedby="helpId" placeholder="ID">
                 </div>
                 <div class="mb-3">
                     <label for="labor" class="form-label">Labor</label>
-                    <input type="text" value="<?php echo $nombrelabor; ?>" class="form-control" name="labor" id="labor" aria-describedby="helpId" placeholder="Ingrese el nombre de la labor">
+                    <input type="text" value="<?php echo $nombrelabor; ?>" class="form-control" name="labor" id="labor"
+                        aria-describedby="helpId" placeholder="Ingrese el nombre de la labor">
                 </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Descripción</label>
-                    <input type="text" value="<?php echo $descripcion; ?>" class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Ingrese la descripción del cultivo">
+                    <input type="text" value="<?php echo $descripcion; ?>" class="form-control" name="descripcion"
+                        id="descripcion" aria-describedby="helpId" placeholder="Ingrese la descripción del cultivo">
                 </div>
                 <button type="submit" id="guardar" class="btn" title="Actualizar">Actualizar</button>
                 &nbsp&nbsp
@@ -80,3 +73,14 @@ if ($_POST) {
 
 <!-- Social footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

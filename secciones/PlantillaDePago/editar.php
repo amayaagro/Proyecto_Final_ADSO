@@ -28,7 +28,6 @@ if ($_POST) {
     $descuento = (isset($_POST['descuento']) ? $_POST['descuento'] : "");
     $valortotal = (isset($_POST['valortotal']) ? $_POST['valortotal'] : "");
 
-
     $sentencia = $conexion->prepare("UPDATE `planilladepago` SET 
         FechaDePago = :FechaDePago, 
         Trabajador = :Trabajador,
@@ -51,54 +50,51 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Editar Pago -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Modificar Pago</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Modificar Datos Pago</strong><img src="../../Img/Logo.png" width="230"
+                    height="80" align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="txtId" class="form-label">Id</label>
-                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId" id="txtId" aria-describedby="helpId" placeholder="ID">
+                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId"
+                        id="txtId" aria-describedby="helpId" placeholder="ID">
                 </div>
                 <div class="mb-3">
                     <label for="fechadepago" class="form-label">Fecha de Pago</label>
-                    <input type="date" value="<?php echo $FechaDePago; ?>" class="form-control" name="fechadepago" id="fechadepago" aria-describedby="helpId" placeholder="">
+                    <input type="date" value="<?php echo $FechaDePago; ?>" class="form-control" name="fechadepago"
+                        id="fechadepago" aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="trabajador" class="form-label">Trabajador</label>
                     <select class="form-select form-select-sm" name="trabajador" id="trabajador">
                         <?php foreach ($empleados as $empleado) { ?>
-                            <option <?php echo ($Trabajador == $empleado['Id']) ? "selected" : ""; ?> value="<?php echo $empleado['Id']; ?>">
-                                <?php echo $empleado['Nombre']; ?></option>
+                        <option <?php echo ($Trabajador == $empleado['Id']) ? "selected" : ""; ?>
+                            value="<?php echo $empleado['Id']; ?>">
+                            <?php echo $empleado['Nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="sueldo" class="form-label">Valor Neto</label>
-                    <input type="number" onChange="CalcularTotal()" value="<?php echo $Sueldo; ?>" class="form-control" name="sueldo" id="sueldo" aria-describedby="helpId" placeholder="Ingrese el valor neto">
+                    <input type="number" onChange="CalcularTotal()" value="<?php echo $Sueldo; ?>" class="form-control"
+                        name="sueldo" id="sueldo" aria-describedby="helpId" placeholder="Ingrese el valor neto">
                 </div>
                 <div class="mb-3">
                     <label for="descuento" class="form-label">Descuento</label>
-                    <input type="number" onChange="CalcularTotal()" value="<?php echo $Descuento; ?>" class="form-control" name="descuento" id="descuento" aria-describedby="helpId" placeholder="Ingrese el descuento">
+                    <input type="number" onChange="CalcularTotal()" value="<?php echo $Descuento; ?>"
+                        class="form-control" name="descuento" id="descuento" aria-describedby="helpId"
+                        placeholder="Ingrese el descuento">
                 </div>
                 <div class="mb-3">
                     <label for="valortotal" class="form-label">Valor a Pagar</label>
-                    <input type="number" value="<?php echo $ValorTotal; ?>" class="form-control" name="valortotal" id="valortotal" aria-describedby="helpId" placeholder="Ingrese el valor a pagar">
+                    <input type="number" value="<?php echo $ValorTotal; ?>" class="form-control" name="valortotal"
+                        id="valortotal" aria-describedby="helpId" placeholder="Ingrese el valor a pagar">
                 </div>
                 </br>
                 <button type="submit" id="guardar" class="btn" title="Actualizar">Actualizar</button>
@@ -111,16 +107,16 @@ if ($_POST) {
 
 <!-- Función Cálculo Resta -->
 <script>
-    function CalcularTotal() {
+function CalcularTotal() {
 
-        var descuento = $("#descuento").val();
-        var sueldo = $("#sueldo").val();
+    var descuento = $("#descuento").val();
+    var sueldo = $("#sueldo").val();
 
-        if (descuento >= 0 && sueldo >= 0) {
-            $("#valortotal").val(sueldo - descuento);
-        }
-
+    if (descuento >= 0 && sueldo >= 0) {
+        $("#valortotal").val(sueldo - descuento);
     }
+
+}
 </script>
 
 <!-- Footer -->
@@ -128,3 +124,14 @@ if ($_POST) {
 
 <!-- Social footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

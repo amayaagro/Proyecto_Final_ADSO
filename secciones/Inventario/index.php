@@ -36,23 +36,13 @@ if (isset($_GET['txtID'])) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta de Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Contenedor Datos Insumos -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Insumos</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Insumos</strong><img src="../../Img/Logo.png" width="230" height="80" align="right">
+            </h2>
         </div>
         <div class="card-body">
             <a name="" id="btncrear" class="btn" title="Agregar" href="crear.php" role="button">Agregar</a>
@@ -71,28 +61,31 @@ if (isset($_GET['txtID'])) {
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <div> <a href="../../secciones/Inventario/reportePDF.php"><img src="../../Img/ImpresoraPDF.png" width="70" height="60" align="right" title="Exportar a PDF" href=""></a>
+                    <div> <a href="../../secciones/Inventario/reportePDF.php"><img src="../../Img/ImpresoraPDF.png"
+                                width="70" height="60" align="right" title="Exportar a PDF" href=""></a>
                     </div>
                     <tbody>
                         <?php foreach ($inventario as $insumos) { ?>
-                            <tr class="">
-                                <td><?php echo $insumos['FechaInventario']; ?></td>
-                                <td><?php echo $insumos['NombreInsumo']; ?></td>
-                                <td><?php echo $insumos['IngredienteActivo']; ?></td>
-                                <td><?php echo $insumos['Unidad']; ?></td>
-                                <td><?php echo $insumos['CantidadEnBodega']; ?></td>
-                                <td><?php echo $insumos['FechaDeCompra']; ?></td>
-                                <td><?php echo $insumos['FechaDeVencimiento']; ?></td>
-                                <?php if ($insumos['Estado'] == 1) { ?>
-                                    <td>Activo</td>
-                                <?php } ?>
-                                <?php if ($insumos['Estado'] == 0) { ?>
-                                    <td>Inactivo</td>
-                                <?php } ?>
-                                <td> <a id="editar" class="btn" title="Editar" href="editar.php?txtID=<?php echo $insumos['Id']; ?>" role="button">Editar</a>
-                                    <a id="borrar" class="btn" title="Borrar" href="javascript:borrar(<?php echo $insumos['Id']; ?>);" role="button">Estado</a>
-                                </td>
-                            </tr>
+                        <tr class="">
+                            <td><?php echo $insumos['FechaInventario']; ?></td>
+                            <td><?php echo $insumos['NombreInsumo']; ?></td>
+                            <td><?php echo $insumos['IngredienteActivo']; ?></td>
+                            <td><?php echo $insumos['Unidad']; ?></td>
+                            <td><?php echo $insumos['CantidadEnBodega']; ?></td>
+                            <td><?php echo $insumos['FechaDeCompra']; ?></td>
+                            <td><?php echo $insumos['FechaDeVencimiento']; ?></td>
+                            <?php if ($insumos['Estado'] == 1) { ?>
+                            <td>Activo</td>
+                            <?php } ?>
+                            <?php if ($insumos['Estado'] == 0) { ?>
+                            <td>Inactivo</td>
+                            <?php } ?>
+                            <td> <a id="editar" class="btn" title="Editar"
+                                    href="editar.php?txtID=<?php echo $insumos['Id']; ?>" role="button">Editar</a>
+                                <a id="borrar" class="btn" title="Borrar"
+                                    href="javascript:borrar(<?php echo $insumos['Id']; ?>);" role="button">Estado</a>
+                            </td>
+                        </tr>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -106,3 +99,14 @@ if (isset($_GET['txtID'])) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

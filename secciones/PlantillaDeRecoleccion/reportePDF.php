@@ -15,8 +15,10 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="http://localhost/kahwa/Css/reporte.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
@@ -106,39 +108,39 @@ FROM planilladerecoleccion");
             </thead>
             <tbody>
                 <?php foreach ($recoleccion as $recolector) { ?>
-                    <tr class="">
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['FechaDeRecoleccion']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="left"><?php echo $recolector['empleado']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['KilosRecolectados']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['JornalesRecoleccion']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['ValorNeto']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['Descuentos']; ?></div>
-                        </td>
-                        <td scope="row">
-                            <div align="center"><?php echo $recolector['Total']; ?></div>
-                        </td>
-                        <?php if ($recolector['Estado'] == 1) { ?>
-                            <td>
-                                <div align="center">Activo</div>
-                            </td>
-                        <?php } ?>
-                        <?php if ($recolector['Estado'] == 0) { ?>
-                            <td>
-                                <div align="center">Inactivo</div>
-                            </td>
-                        <?php } ?>
-                    </tr>
+                <tr class="">
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['FechaDeRecoleccion']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="left"><?php echo $recolector['empleado']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['KilosRecolectados']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['JornalesRecoleccion']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['ValorNeto']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['Descuentos']; ?></div>
+                    </td>
+                    <td scope="row">
+                        <div align="center"><?php echo $recolector['Total']; ?></div>
+                    </td>
+                    <?php if ($recolector['Estado'] == 1) { ?>
+                    <td>
+                        <div align="center">Activo</div>
+                    </td>
+                    <?php } ?>
+                    <?php if ($recolector['Estado'] == 0) { ?>
+                    <td>
+                        <div align="center">Inactivo</div>
+                    </td>
+                    <?php } ?>
+                </tr>
                 <?php } ?>
             </tbody>
         </table>
@@ -147,21 +149,22 @@ FROM planilladerecoleccion");
 
 </html>
 
-<!-- Parametros Reporte Insumos -->
+<!-- Parametros Reporte pdf Trabajadores -->
 <?php
-$html = ob_get_clean();
-//echo $html; 
 
-include '../../Library/dompdf/autoload.inc.php';
+$html = ob_get_clean();
+
+require '../../Library/dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnabled' => true));
-$dompdf->SetOptions($options);
+$options->setDefaultFont('Courier');
+$dompdf->setOptions($options);
 $dompdf->loadHTML($html);
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
-$dompdf->stream("Recoleccion.pdf", array("Attachment" => true));
+$dompdf->stream("Trabajadores.pdf", array("Attachment" => false));
 ?>

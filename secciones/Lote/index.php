@@ -37,23 +37,13 @@ if (isset($_GET['txtID'])) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Contenedor Datos Lotes -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Lotes</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Lotes</strong><img src="../../Img/Logo.png" width="230" height="80" align="right">
+            </h2>
         </div>
         <div class="card-body">
             <a name="" id="btncrear" class="btn" title="Agregar" href="crear.php" role="button">Agregar</a>
@@ -72,22 +62,24 @@ if (isset($_GET['txtID'])) {
                     </thead>
                     <tbody>
                         <?php foreach ($lotes as $lote) { ?>
-                            <tr class="">
-                                <td scope="row"><?php echo $lote['NombreLote']; ?></td>
-                                <td scope="row"><?php echo $lote['fincaregistrada']; ?></td>
-                                <td scope="row"><?php echo $lote['cultivosembrado']; ?></td>
-                                <td scope="row"><?php echo $lote['Tamano']; ?></td>
-                                <td scope="row"><?php echo $lote['FechaDeSiembra']; ?></td>
-                                <?php if ($lote['Estado'] == 1) { ?>
-                                    <td>Activo</td>
-                                <?php } ?>
-                                <?php if ($lote['Estado'] == 0) { ?>
-                                    <td>Inactivo</td>
-                                <?php } ?>
-                                <td> <a id="editar" class="btn" title="Editar" href="editar.php?txtID=<?php echo $lote['Id']; ?>" role="button">Editar</a>
-                                    <a id="borrar" class="btn" title="Estado" href="javascript:borrar(<?php echo $lote['Id']; ?>);" role="button">Estado</a>
-                                </td>
-                            </tr>
+                        <tr class="">
+                            <td scope="row"><?php echo $lote['NombreLote']; ?></td>
+                            <td scope="row"><?php echo $lote['fincaregistrada']; ?></td>
+                            <td scope="row"><?php echo $lote['cultivosembrado']; ?></td>
+                            <td scope="row"><?php echo $lote['Tamano']; ?></td>
+                            <td scope="row"><?php echo $lote['FechaDeSiembra']; ?></td>
+                            <?php if ($lote['Estado'] == 1) { ?>
+                            <td>Activo</td>
+                            <?php } ?>
+                            <?php if ($lote['Estado'] == 0) { ?>
+                            <td>Inactivo</td>
+                            <?php } ?>
+                            <td> <a id="editar" class="btn" title="Editar"
+                                    href="editar.php?txtID=<?php echo $lote['Id']; ?>" role="button">Editar</a>
+                                <a id="borrar" class="btn" title="Estado"
+                                    href="javascript:borrar(<?php echo $lote['Id']; ?>);" role="button">Estado</a>
+                            </td>
+                        </tr>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -101,3 +93,14 @@ if (isset($_GET['txtID'])) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

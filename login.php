@@ -42,8 +42,10 @@ if ($_POST) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="http://localhost/kahwa/Css/login.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
@@ -52,8 +54,6 @@ if ($_POST) {
 
     <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
-
 
 <body onload="quitar()">
     <header>
@@ -65,16 +65,7 @@ if ($_POST) {
             <!-- Copyright -->
         </footer>
     </header>
-    <!-- Herramienta de Accesibilidad -->
-    <script>
-        (function(d) {
-            var s = d.createElement("script");
-            s.setAttribute("data-account", "fFgZ6B1nWP");
-            s.setAttribute("src", "https://cdn.userway.org/widget.js");
-            s.setAttribute('locale', 'es');
-            (d.body || d.head).appendChild(s);
-        })(document)
-    </script>
+
     <!-- Formulario Inicio de Sesión -->
     <main class="container">
         <br /><br />
@@ -93,16 +84,16 @@ if ($_POST) {
                         <br>
                         <div class="card-body">
                             <?php if (isset($mensaje)) { ?>
-                                <div class="alert alert-danger" role="alert">
-                                    <strong><?php echo $mensaje ?></strong>
-                                </div>
+                            <div class="alert alert-danger" role="alert">
+                                <strong><?php echo $mensaje ?></strong>
+                            </div>
                             <?php } ?>
                             <?php
 
                             if (isset($_REQUEST['mensaje'])) { ?>
-                                <div class="alert alert-success" id="alert-success" role="alert">
-                                    <strong><?php echo $_REQUEST['mensaje'] ?></strong>
-                                </div>
+                            <div class="alert alert-success" id="alert-success" role="alert">
+                                <strong><?php echo $_REQUEST['mensaje'] ?></strong>
+                            </div>
                             <?php } ?>
                             <form action="" method="post">
                                 <p><img src="img/logo.png" width="100%" Background-color="transparent"></p>
@@ -110,24 +101,30 @@ if ($_POST) {
                                     <label for="correo" class="form-label">
                                         <h5>Correo Electrónico</h5>
                                     </label>
-                                    <input type="email" value="<?php if (isset($correo)) echo $correo ?>" class="form-control" name="correo" id="correo" title="Correo" aria-describedby="helpId" placeholder="Ingrese su correo electrónico">
+                                    <input type="email" value="<?php if (isset($correo)) echo $correo ?>"
+                                        class="form-control" name="correo" id="correo" title="Correo"
+                                        aria-describedby="helpId" placeholder="Ingrese su correo electrónico">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">
                                         <h5>Contraseña</h5>
                                     </label>
-                                    <input type="password" class="form-control" name="password" id="password" title="Contraseña" aria-describedby="helpId" placeholder="Escriba Su Password">
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        title="Contraseña" aria-describedby="helpId" placeholder="Escriba Su Password">
                                 </div>
                                 <br>
                                 <br>
-                                <center><button type="submit" title="Ingresar al Sistema" class="btn btn-primary">Ingresar al sistema</button></center>
+                                <center><button type="submit" title="Ingresar al Sistema"
+                                        class="btn btn-primary">Ingresar al sistema</button></center>
                                 <br />
                                 <div>
-                                    <div align="left"><a href="recuperar.php" title="Olvidó su contraseña" style="color:#000000"><strong>¿Olvidó su contraseña?</strong></a></div>
+                                    <div align="left"><a href="recuperar.php" title="Olvidó su contraseña"
+                                            style="color:#000000"><strong>¿Olvidó su contraseña?</strong></a></div>
                                     <p></p>
                                 </div>
                             </form>
-                            <p>¿No tienes cuenta aún? <a href="registrar.php" title="Regístrate acá" style="color:#000000"><strong>Regístrate acá</strong></a></p>
+                            <p>¿No tienes cuenta aún? <a href="registrar.php" title="Regístrate acá"
+                                    style="color:#000000"><strong>Regístrate acá</strong></a></p>
                         </div>
                     </div>
                 </div>
@@ -137,20 +134,33 @@ if ($_POST) {
     <footer>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
     </script>
 
     <script>
-        function quitar() {
-            setTimeout(function() {
-                document.getElementById('alert-success').style.display = "none";
-            }, 5000);
+    function quitar() {
+        setTimeout(function() {
+            document.getElementById('alert-success').style.display = "none";
+        }, 5000);
 
-        }
+    }
     </script>
 </body>
 
 </html>
+
+<!-- Herramienta de Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

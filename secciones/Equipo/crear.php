@@ -35,57 +35,53 @@ if ($_POST) {
 ?>
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Crear Equipo -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Registrar Equipo</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Registrar Equipo</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="fechadeinventario" class="form-label">Fecha de Inventario</label>
-                    <input type="date" class="form-control" name="fechadeinventario" id="fechadeinventario" aria-describedby="helpId" placeholder="">
+                    <input type="date" class="form-control" name="fechadeinventario" id="fechadeinventario"
+                        aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="nombreequipo" class="form-label">Nombre del Equipo</label>
-                    <input type="text" class="form-control" name="nombreequipo" id="nombreequipo" value="" required aria-describedby="helpId" placeholder="Ingrese el nombre del equipo">
+                    <input type="text" class="form-control" name="nombreequipo" id="nombreequipo" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese el nombre del equipo">
                 </div>
                 <div class="mb-3">
                     <label for="cantidad" class="form-label">Cantidad</label>
-                    <input type="number" class="form-control" name="cantidad" id="cantidad" value="" required aria-describedby="helpId" placeholder="Ingrese la cantidad">
+                    <input type="number" class="form-control" name="cantidad" id="cantidad" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese la cantidad">
                 </div>
                 <div class="mb-3">
                     <label for="fechadeentrega" class="form-label">Fecha de Entrega</label>
-                    <input type="date" class="form-control" name="fechadeentrega" id="fechadeentrega" aria-describedby="helpId" placeholder="">
+                    <input type="date" class="form-control" name="fechadeentrega" id="fechadeentrega"
+                        aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="fechaderecibido" class="form-label">Fecha de Recibido</label>
-                    <input type="date" class="form-control" name="fechaderecibido" id="fechaderecibido" aria-describedby="helpId" placeholder="">
+                    <input type="date" class="form-control" name="fechaderecibido" id="fechaderecibido"
+                        aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="responsable" class="form-label">Responsable</label>
                     <select class="form-select form-select-sm" name="responsable" id="responsable">
                         <?php foreach ($empleados as $empleado) { ?>
-                            <option value="<?php echo $empleado['Id']; ?>"><?php echo $empleado['Nombre']; ?></option>
+                        <option value="<?php echo $empleado['Id']; ?>"><?php echo $empleado['Nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="fechademantenimiento" class="form-label">Fecha de Mantenimiento</label>
-                    <input type="date" class="form-control" name="fechademantenimiento" id="fechademantenimiento" aria-describedby="helpId" placeholder="">
+                    <input type="date" class="form-control" name="fechademantenimiento" id="fechademantenimiento"
+                        aria-describedby="helpId" placeholder="">
                 </div>
         </div>
         </br>
@@ -101,3 +97,14 @@ if ($_POST) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

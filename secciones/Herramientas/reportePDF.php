@@ -15,8 +15,10 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="http://localhost/kahwa/Css/reporte.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
@@ -103,35 +105,35 @@ ob_start();
             </thead>
             <tbody>
                 <?php foreach ($herramientas as $herramienta) { ?>
-                    <tr class="">
-                        <td>
-                            <div align="left"><?php echo $herramienta['NombreHerramienta']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $herramienta['Cantidad']; ?></div>
-                        </td>
-                        <td>
-                            <div align="left"><?php echo $herramienta['empleado']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $herramienta['FechaDeEntrega']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $herramienta['FechaDeRecibido']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $herramienta['FechaDeReemplazo']; ?></div>
-                        </td>
-                        <?php if ($herramienta['Estado'] == 1) { ?>
-                            <td>
-                                <div align="center">Activo</div>
-                            </td>
-                        <?php } ?>
-                        <?php if ($herramienta['Estado'] == 0) { ?>
-                            <td>
-                                <div align="center">Inactivo</div>
-                            </td>
-                        <?php } ?>
+                <tr class="">
+                    <td>
+                        <div align="left"><?php echo $herramienta['NombreHerramienta']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $herramienta['Cantidad']; ?></div>
+                    </td>
+                    <td>
+                        <div align="left"><?php echo $herramienta['empleado']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $herramienta['FechaDeEntrega']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $herramienta['FechaDeRecibido']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $herramienta['FechaDeReemplazo']; ?></div>
+                    </td>
+                    <?php if ($herramienta['Estado'] == 1) { ?>
+                    <td>
+                        <div align="center">Activo</div>
+                    </td>
+                    <?php } ?>
+                    <?php if ($herramienta['Estado'] == 0) { ?>
+                    <td>
+                        <div align="center">Inactivo</div>
+                    </td>
+                    <?php } ?>
                     <?php } ?>
             </tbody>
         </table>
@@ -140,23 +142,22 @@ ob_start();
 
 </html>
 
-<!-- Parametros Reporte Equipos -->
+<!-- Parametros Reporte pdf Trabajadores -->
 <?php
-$html = ob_get_clean();
-//echo $html; 
 
-require_once '../../Library/dompdf/autoload.inc.php';
+$html = ob_get_clean();
+
+require '../../Library/dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnabled' => true));
-$dompdf->SetOptions($options);
+$options->setDefaultFont('Courier');
+$dompdf->setOptions($options);
 $dompdf->loadHTML($html);
-
-//$dompdf->setPaper('letter');
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
-$dompdf->stream("Trabajadores_.pdf", array("Attachment" => true));
+$dompdf->stream("Trabajadores.pdf", array("Attachment" => false));
 ?>

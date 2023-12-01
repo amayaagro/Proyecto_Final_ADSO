@@ -38,69 +38,70 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Crear Finca -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Registrar Finca</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Registrar Finca</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="nombredelpredio" class="form-label">Nombre del Predio</label>
-                    <input type="text" class="form-control" name="nombredelpredio" id="nombredelpredio" value="" required aria-describedby="helpId" placeholder="Ingrese el nombre del predio">
+                    <input type="text" class="form-control" name="nombredelpredio" id="nombredelpredio" value=""
+                        required aria-describedby="helpId" placeholder="Ingrese el nombre del predio">
                 </div>
                 <div class="mb-3">
                     <label for="vereda" class="form-label">Vereda</label>
-                    <input type="text" class="form-control" name="vereda" id="vereda" aria-describedby="helpId" value="" required placeholder="Ingrese la vereda">
+                    <input type="text" class="form-control" name="vereda" id="vereda" aria-describedby="helpId" value=""
+                        required placeholder="Ingrese la vereda">
                 </div>
                 <div class="mb-3">
                     <label for="municipio" class="form-label">Municipio</label>
-                    <input type="text" class="form-control" name="municipio" id="municipio" value="" required aria-describedby="helpId" placeholder="Ingrese el municipio">
+                    <input type="text" class="form-control" name="municipio" id="municipio" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese el municipio">
                 </div>
                 <div class="mb-3">
                     <label for="departamento" class="form-label">Departamento</label>
-                    <input type="text" class="form-control" name="departamento" id="departamento" value="" required aria-describedby="helpId" placeholder="ingrese el departamento">
+                    <input type="text" class="form-control" name="departamento" id="departamento" value="" required
+                        aria-describedby="helpId" placeholder="ingrese el departamento">
                 </div>
                 <div class="mb-3">
                     <label for="tamaño" class="form-label">Tamaño (Ha)</label>
-                    <input type="number" class="form-control" name="tamaño" id="tamaño" value="" required aria-describedby="helpId" placeholder="Ingrese el tamaño">
+                    <input type="number" class="form-control" name="tamaño" id="tamaño" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese el tamaño">
                 </div>
                 <div class="mb-3">
                     <label for="temperatura" class="form-label">Temperatura (°C)</label>
-                    <input type="number" class="form-control" name="temperatura" id="temperatura" value="" required aria-describedby="helpId" placeholder="ingrese la temperatura">
+                    <input type="number" class="form-control" name="temperatura" id="temperatura" value="" required
+                        aria-describedby="helpId" placeholder="ingrese la temperatura">
                 </div>
                 <div class="mb-3">
                     <label for="brillosolar" class="form-label">Brillo Solar (h/año)</label>
-                    <input type="number" class="form-control" name="brillosolar" id="brillosolar" value="" required aria-describedby="helpId" placeholder="Ingrese el brillo solar">
+                    <input type="number" class="form-control" name="brillosolar" id="brillosolar" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese el brillo solar">
                 </div>
                 <div class="mb-3">
                     <label for="lluvia" class="form-label">Lluvia (mm)</label>
-                    <input type="number" class="form-control" name="lluvia" id="lluvia" value="" required aria-describedby="helpId" placeholder="Ingrese la lluvia">
+                    <input type="number" class="form-control" name="lluvia" id="lluvia" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese la lluvia">
                 </div>
                 <div class="mb-3">
                     <label for="humedadrelativa" class="form-label">Humedad Relativa (%HR)</label>
-                    <input type="number" class="form-control" name="humedadrelativa" id="humedadrelativa" value="" required aria-describedby="helpId" placeholder="Ingrese la humedad relativa">
+                    <input type="number" class="form-control" name="humedadrelativa" id="humedadrelativa" value=""
+                        required aria-describedby="helpId" placeholder="Ingrese la humedad relativa">
                 </div>
                 <div class="mb-3">
                     <label for="relieve" class="form-label">Relieve (plano, ondulado, quebrado)</label>
-                    <input type="text" class="form-control" name="relieve" id="relieve" value="" required aria-describedby="helpId" placeholder="Ingrese el relieve">
+                    <input type="text" class="form-control" name="relieve" id="relieve" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese el relieve">
                 </div>
                 <div class="mb-3">
                     <label for="altura" class="form-label">Altura (m.s.n.m)</label>
-                    <input type="number" class="form-control" name="altura" id="altura" value="" required aria-describedby="helpId" placeholder="Ingrese la altura">
+                    <input type="number" class="form-control" name="altura" id="altura" value="" required
+                        aria-describedby="helpId" placeholder="Ingrese la altura">
                 </div>
                 </br>
                 <button type="submit" id="guardar" class="btn" title="Agregar">Agregar</button>
@@ -116,3 +117,14 @@ if ($_POST) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

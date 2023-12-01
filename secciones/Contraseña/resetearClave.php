@@ -53,23 +53,23 @@ if (isset($_REQUEST['correo']) && !empty($_REQUEST['correo']) && !isset($_REQUES
     <link rel="stylesheet" href="http://localhost/kahwa/Css/recuperar.css" />
     </script>
     <script>
-        (function(d) {
-            var s = d.createElement("script");
-            s.setAttribute("data-account", "fFgZ6B1nWP");
-            s.setAttribute("src", "https://cdn.userway.org/widget.js");
-            s.setAttribute('locale', 'es');
-            (d.body || d.head).appendChild(s);
-        })(document)
+    (function(d) {
+        var s = d.createElement("script");
+        s.setAttribute("data-account", "fFgZ6B1nWP");
+        s.setAttribute("src", "https://cdn.userway.org/widget.js");
+        s.setAttribute('locale', 'es');
+        (d.body || d.head).appendChild(s);
+    })(document)
     </script>
     <style>
-        .ocultar {
-            display: none;
+    .ocultar {
+        display: none;
 
-        }
+    }
 
-        .mostrar {
-            display: block;
-        }
+    .mostrar {
+        display: block;
+    }
     </style>
 </head>
 
@@ -79,7 +79,8 @@ if (isset($_REQUEST['correo']) && !empty($_REQUEST['correo']) && !isset($_REQUES
 
         <!-- Formulario Recuperar Contraseña -->
         <div class="container-r">
-            <h1 align=center>Restablecer Contraseña<img src="../../Img/Logo.png" width="311" height="100" align="right"></h1><br>
+            <h1 align=center>Restablecer Contraseña<img src="../../Img/Logo.png" width="311" height="100" align="right">
+            </h1><br>
             <h2 align=left><label for="username">Por favor, ingrese el codigo que
                     llego a su correo electrónico y la nueva contraseña que desea usar</label></h2>
             <p><br></p>
@@ -87,23 +88,27 @@ if (isset($_REQUEST['correo']) && !empty($_REQUEST['correo']) && !isset($_REQUES
             <?php echo !empty($statusMsg) ? '<p id="errorcod" style="color:red;">' . $statusMsg . '</p>' : ''; ?>
             <div class="mb-3">
 
-                <form action="" method="post" onsubmit="verificarPasswords(); return false" style="margin: left; width: 220px;">
+                <form action="" method="post" onsubmit="verificarPasswords(); return false"
+                    style="margin: left; width: 220px;">
                     <div class="mb-3" display="block">
                         <label for="codigo" class="form-label"><strong>Codigo:</strong></label>
                         <p><br></p>
-                        <input type="number" required value="" class="form-control" name="codigo" id="codigo" aria-describedby="helpId" style="margin: auto; width: 220px;">
+                        <input type="number" required value="" class="form-control" name="codigo" id="codigo"
+                            aria-describedby="helpId" style="margin: auto; width: 220px;">
                         <p><br></p>
                     </div>
                     <div class="mb-3">
                         <label for="contraseña" class="form-label"><strong>Nueva Contraseña:</strong></label>
                         <p><br></p>
-                        <input type="password" required value="" class="form-control" name="password" id="password" aria-describedby="helpId" style="margin: auto; width: 220px;">
+                        <input type="password" required value="" class="form-control" name="password" id="password"
+                            aria-describedby="helpId" style="margin: auto; width: 220px;">
                         <p><br></p>
                     </div>
                     <div class="mb-3">
                         <label for="contraseña" class="form-label"><strong>Confirme Contraseña:</strong></label>
                         <p><br></p>
-                        <input type="password" required value="" class="form-control" name="conpassword" id="conpassword" aria-describedby="helpId" style="margin: auto; width: 220px;">
+                        <input type="password" required value="" class="form-control" name="conpassword"
+                            id="conpassword" aria-describedby="helpId" style="margin: auto; width: 220px;">
                         <p><br></p>
                     </div>
                     <div id="error" class="alert alert-danger ocultar" style="color:red;" role="alert">
@@ -119,47 +124,58 @@ if (isset($_REQUEST['correo']) && !empty($_REQUEST['correo']) && !isset($_REQUES
 
         </div>
         <script>
-            function quitar() {
+        function quitar() {
+            setTimeout(function() {
+                document.getElementById('errorcod').style.display = "none";
+            }, 3000);
+
+        }
+
+        function verificarPasswords() {
+
+            // Obtenemos los valores de los campos de contraseñas 
+            pass1 = document.getElementById('password');
+            pass2 = document.getElementById('conpassword');
+
+            // Verificamos si las constraseñas no coinciden 
+            if (pass1.value != pass2.value) {
+
+                // Si las constraseñas no coinciden mostramos un mensaje 
+                document.getElementById("error").classList.add("mostrar");
+
+                return false;
+            } else {
+
+                // Si las contraseñas coinciden ocultamos el mensaje de error
+                document.getElementById("error").classList.remove("mostrar");
+
+                // Mostramos un mensaje mencionando que las Contraseñas coinciden 
+                document.getElementById("ok").classList.remove("ocultar");
+
+                // Desabilitamos el botón de login 
+                document.getElementById("login").disabled = true;
+
+                // Refrescamos la página (Simulación de envío del formulario) 
                 setTimeout(function() {
-                    document.getElementById('errorcod').style.display = "none";
+                    location.reload();
                 }, 3000);
 
+                return true;
             }
 
-            function verificarPasswords() {
-
-                // Obtenemos los valores de los campos de contraseñas 
-                pass1 = document.getElementById('password');
-                pass2 = document.getElementById('conpassword');
-
-                // Verificamos si las constraseñas no coinciden 
-                if (pass1.value != pass2.value) {
-
-                    // Si las constraseñas no coinciden mostramos un mensaje 
-                    document.getElementById("error").classList.add("mostrar");
-
-                    return false;
-                } else {
-
-                    // Si las contraseñas coinciden ocultamos el mensaje de error
-                    document.getElementById("error").classList.remove("mostrar");
-
-                    // Mostramos un mensaje mencionando que las Contraseñas coinciden 
-                    document.getElementById("ok").classList.remove("ocultar");
-
-                    // Desabilitamos el botón de login 
-                    document.getElementById("login").disabled = true;
-
-                    // Refrescamos la página (Simulación de envío del formulario) 
-                    setTimeout(function() {
-                        location.reload();
-                    }, 3000);
-
-                    return true;
-                }
-
-            }
+        }
         </script>
     </body>
 
 </html>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

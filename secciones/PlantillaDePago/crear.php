@@ -32,49 +32,43 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Crear Insumo -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Registro de Pago</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Registro de Pago</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="fechadepago" class="form-label">Fecha de Pago</label>
-                    <input type="date" class="form-control" name="fechadepago" id="fechadepago" aria-describedby="helpId" placeholder="">
+                    <input type="date" class="form-control" name="fechadepago" id="fechadepago"
+                        aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="trabajador" class="form-label">Trabajador</label>
                     <select class="form-select form-select-sm" name="trabajador" id="trabajador">
                         <?php foreach ($empleados as $empleado) { ?>
-                            <option value="<?php echo $empleado['Id']; ?>"><?php echo $empleado['Nombre']; ?></option>
+                        <option value="<?php echo $empleado['Id']; ?>"><?php echo $empleado['Nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="mb-3">
                     <label for="sueldo" class="form-label">Valor Neto</label>
-                    <input type="number" onChange="CalcularTotal()" class="form-control" name="sueldo" id="sueldo" value="" required aria-describedby="helpId" placeholder="Ingrese el valor neto">
+                    <input type="number" onChange="CalcularTotal()" class="form-control" name="sueldo" id="sueldo"
+                        value="" required aria-describedby="helpId" placeholder="Ingrese el valor neto">
                 </div>
                 <div class="mb-3">
                     <label for="descuento" class="form-label">Descuento</label>
-                    <input type="number" onChange="CalcularTotal()" class="form-control" name="descuento" id="descuento" value="" required aria-describedby="helpId" placeholder="Ingrese el descuento">
+                    <input type="number" onChange="CalcularTotal()" class="form-control" name="descuento" id="descuento"
+                        value="" required aria-describedby="helpId" placeholder="Ingrese el descuento">
                 </div>
                 <div class="mb-3">
                     <label for="valortotal" class="form-label">Valor a Pagar</label>
-                    <input type="number" class="form-control" name="valortotal" id="valortotal" aria-describedby="helpId" placeholder="Ingrese el valor total">
+                    <input type="number" class="form-control" name="valortotal" id="valortotal"
+                        aria-describedby="helpId" placeholder="Ingrese el valor total">
                 </div>
                 </br>
                 <button type="submit" id="guardar" class="btn" title="Agregar">Agregar</button>
@@ -87,16 +81,16 @@ if ($_POST) {
 
 <!-- Función Cálculo Resta -->
 <script>
-    function CalcularTotal() {
+function CalcularTotal() {
 
-        var descuento = $("#descuento").val();
-        var sueldo = $("#sueldo").val();
+    var descuento = $("#descuento").val();
+    var sueldo = $("#sueldo").val();
 
-        if (descuento >= 0 && sueldo >= 0) {
-            $("#valortotal").val(sueldo - descuento);
-        }
-
+    if (descuento >= 0 && sueldo >= 0) {
+        $("#valortotal").val(sueldo - descuento);
     }
+
+}
 </script>
 
 <!-- Footer -->
@@ -104,3 +98,14 @@ if ($_POST) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

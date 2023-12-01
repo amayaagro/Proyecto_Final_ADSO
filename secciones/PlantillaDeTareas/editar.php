@@ -64,40 +64,33 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Editar Labores -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Modificar Labor Asignada</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Modificar Datos Labor Asignada</strong><img src="../../Img/Logo.png" width="230"
+                    height="80" align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="txtId" class="form-label">Id</label>
-                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId" id="txtId" aria-describedby="helpId" placeholder="ID">
+                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId"
+                        id="txtId" aria-describedby="helpId" placeholder="ID">
                 </div>
                 <div class="mb-3">
                     <label for="fechadeasignacion" class="form-label">Fecha de Asignación</label>
-                    <input type="date" value="<?php echo $FechaDeAsignacion; ?>" class="form-control" name="fechadeasignacion" id="fechadeasignacion" aria-describedby="helpId" placeholder="">
+                    <input type="date" value="<?php echo $FechaDeAsignacion; ?>" class="form-control"
+                        name="fechadeasignacion" id="fechadeasignacion" aria-describedby="helpId" placeholder="">
                 </div>
                 <div class="mb-3">
                     <label for="encargado" class="form-label">Encargado</label>
                     <select class="form-select form-select-sm" name="encargado" id="encargado">
                         <?php foreach ($empleados as $empleado) { ?>
-                            <option <?php echo ($Encargado == $empleado['Id']) ? "selected" : ""; ?> value="<?php echo $empleado['Id']; ?>">
-                                <?php echo $empleado['Nombre']; ?></option>
+                        <option <?php echo ($Encargado == $empleado['Id']) ? "selected" : ""; ?>
+                            value="<?php echo $empleado['Id']; ?>">
+                            <?php echo $empleado['Nombre']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -105,8 +98,9 @@ if ($_POST) {
                     <label for="finca" class="form-label">Finca</label>
                     <select class="form-select form-select-sm" name="finca" id="finca">
                         <?php foreach ($fincas as $finca) { ?>
-                            <option <?php echo ($Finca == $finca['id']) ? "selected" : ""; ?> value="<?php echo $finca['id']; ?>">
-                                <?php echo $finca['Nombredelpredio']; ?></option>
+                        <option <?php echo ($Finca == $finca['id']) ? "selected" : ""; ?>
+                            value="<?php echo $finca['id']; ?>">
+                            <?php echo $finca['Nombredelpredio']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -114,8 +108,9 @@ if ($_POST) {
                     <label for="lote" class="form-label">Lote</label>
                     <select class="form-select form-select-sm" name="lote" id="lote">
                         <?php foreach ($lotes as $lote) { ?>
-                            <option <?php echo ($Lote == $lote['Id']) ? "selected" : ""; ?> value="<?php echo $lote['Id']; ?>">
-                                <?php echo $lote['NombreLote']; ?></option>
+                        <option <?php echo ($Lote == $lote['Id']) ? "selected" : ""; ?>
+                            value="<?php echo $lote['Id']; ?>">
+                            <?php echo $lote['NombreLote']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -123,8 +118,9 @@ if ($_POST) {
                     <label for="labor" class="form-label">Labor</label>
                     <select class="form-select form-select-sm" name="labor" id="labor">
                         <?php foreach ($labores as $labor) { ?>
-                            <option <?php echo ($Labor == $labor['Id']) ? "selected" : ""; ?> value="<?php echo $labor['Id']; ?>">
-                                <?php echo $labor['labor']; ?></option>
+                        <option <?php echo ($Labor == $labor['Id']) ? "selected" : ""; ?>
+                            value="<?php echo $labor['Id']; ?>">
+                            <?php echo $labor['labor']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
@@ -142,3 +138,14 @@ if ($_POST) {
 
 <!-- Social footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

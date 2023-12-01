@@ -37,23 +37,13 @@ if (isset($_GET['txtID'])) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta de Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Contenedor Datos Insumos -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Planilla de Pago</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Planilla de Pago</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <a name="" id="btncrear" class="btn" title="Agregar" href="crear.php" role="button">Agregar</a>
@@ -70,26 +60,29 @@ if (isset($_GET['txtID'])) {
                             <th scope="col">Acciones</th>
                         </tr>
                     </thead>
-                    <div> <a href="../../secciones/PlantillaDePago/reportePDF.php"><img src="../../Img/ImpresoraPDF.png" width="70" height="60" align="right" title="Exportar a PDF" href=""></a>
+                    <div> <a href="../../secciones/PlantillaDePago/reportePDF.php"><img src="../../Img/ImpresoraPDF.png"
+                                width="70" height="60" align="right" title="Exportar a PDF" href=""></a>
                     </div>
                     <tbody>
                         <?php foreach ($devengado as $pago) { ?>
-                            <tr class="">
-                                <td scope="row"><?php echo $pago['FechaDePago']; ?></td>
-                                <td scope="row"><?php echo $pago['empleado']; ?></td>
-                                <td scope="row">$ <?php echo $pago['Sueldo']; ?></td>
-                                <td scope="row">$ <?php echo $pago['Descuento']; ?></td>
-                                <td scope="row">$ <?php echo $pago['ValorTotal']; ?></td>
-                                <?php if ($pago['Estado'] == 1) { ?>
-                                    <td>Activo</td>
-                                <?php } ?>
-                                <?php if ($pago['Estado'] == 0) { ?>
-                                    <td>Inactivo</td>
-                                <?php } ?>
-                                <td> <a id="editar" class="btn" title="Editar" href="editar.php?txtID=<?php echo $pago['Id']; ?>" role="button">Editar</a>
-                                    <a id="borrar" class="btn" title="Estado" href="javascript:borrar(<?php echo $pago['Id']; ?>);" role="button">Estado</a>
-                                </td>
-                            </tr>
+                        <tr class="">
+                            <td scope="row"><?php echo $pago['FechaDePago']; ?></td>
+                            <td scope="row"><?php echo $pago['empleado']; ?></td>
+                            <td scope="row">$ <?php echo $pago['Sueldo']; ?></td>
+                            <td scope="row">$ <?php echo $pago['Descuento']; ?></td>
+                            <td scope="row">$ <?php echo $pago['ValorTotal']; ?></td>
+                            <?php if ($pago['Estado'] == 1) { ?>
+                            <td>Activo</td>
+                            <?php } ?>
+                            <?php if ($pago['Estado'] == 0) { ?>
+                            <td>Inactivo</td>
+                            <?php } ?>
+                            <td> <a id="editar" class="btn" title="Editar"
+                                    href="editar.php?txtID=<?php echo $pago['Id']; ?>" role="button">Editar</a>
+                                <a id="borrar" class="btn" title="Estado"
+                                    href="javascript:borrar(<?php echo $pago['Id']; ?>);" role="button">Estado</a>
+                            </td>
+                        </tr>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -103,3 +96,14 @@ if (isset($_GET['txtID'])) {
 
 <!-- Social Footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

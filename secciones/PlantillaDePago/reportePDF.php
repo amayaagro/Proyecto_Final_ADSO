@@ -132,21 +132,22 @@ ob_start();
 
 </html>
 
-<!-- Parametros Reporte Pagos -->
+<!-- Parametros Reporte pdf Trabajadores -->
 <?php
-$html = ob_get_clean();
-//echo $html;
 
-require_once '../../Library/dompdf/autoload.inc.php';
+$html = ob_get_clean();
+
+require '../../Library/dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnabled' => true));
-$dompdf->SetOptions($options);
+$options->setDefaultFont('Courier');
+$dompdf->setOptions($options);
 $dompdf->loadHTML($html);
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
-$dompdf->stream("Pagos.pdf", array("Attachment" => true));
+$dompdf->stream("Trabajadores.pdf", array("Attachment" => false));
 ?>

@@ -15,8 +15,10 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="http://localhost/kahwa/Css/reporte.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.css">
@@ -75,36 +77,36 @@ ob_start();
             </thead>
             <tbody>
                 <?php foreach ($empleados as $empleado) { ?>
-                    <tr class="">
-                        <td>
-                            <div align="left"><?php echo $empleado['Nombre']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $empleado['Documento']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $empleado['Telefono']; ?></div>
-                        </td>
-                        <td>
-                            <div align="center"><?php echo $empleado['FechaDeNacimiento']; ?></div>
-                        </td>
-                        <td>
-                            <div align="left"><?php echo $empleado['Eps']; ?></div>
-                        </td>
-                        <td>
-                            <div align="left"><?php echo $empleado['Arl']; ?></div>
-                        </td>
-                        <?php if ($empleado['Estado'] == 1) { ?>
-                            <td>
-                                <div align="center">Activo</div>
-                            </td>
-                        <?php } ?>
-                        <?php if ($empleado['Estado'] == 0) { ?>
-                            <td>
-                                <div align="center">Inactivo</div>
-                            </td>
-                        <?php } ?>
-                    </tr>
+                <tr class="">
+                    <td>
+                        <div align="left"><?php echo $empleado['Nombre']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $empleado['Documento']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $empleado['Telefono']; ?></div>
+                    </td>
+                    <td>
+                        <div align="center"><?php echo $empleado['FechaDeNacimiento']; ?></div>
+                    </td>
+                    <td>
+                        <div align="left"><?php echo $empleado['Eps']; ?></div>
+                    </td>
+                    <td>
+                        <div align="left"><?php echo $empleado['Arl']; ?></div>
+                    </td>
+                    <?php if ($empleado['Estado'] == 1) { ?>
+                    <td>
+                        <div align="center">Activo</div>
+                    </td>
+                    <?php } ?>
+                    <?php if ($empleado['Estado'] == 0) { ?>
+                    <td>
+                        <div align="center">Inactivo</div>
+                    </td>
+                    <?php } ?>
+                </tr>
                 <?php } ?>
             </tbody>
         </table>
@@ -113,23 +115,22 @@ ob_start();
 
 </html>
 
-<!-- Parametros Reporte Trabajadores -->
+<!-- Parametros Reporte pdf Trabajadores -->
 <?php
 
 $html = ob_get_clean();
 
-require('../../Library/dompdf/autoload.inc.php');
+require '../../Library/dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf();
 $options = $dompdf->getOptions();
 $options->set(array('isRemoteEnabled' => true));
-$dompdf->SetOptions($options);
-$dompdf->set_option('Arial', 'Courier');
+$options->setDefaultFont('Courier');
+$dompdf->setOptions($options);
 $dompdf->loadHTML($html);
-//$dompdf->setPaper('letter');
 $dompdf->setPaper('A4', 'landscape');
 $dompdf->render();
-$dompdf->stream("Trabajadores.pdf", array("Attachment" => true));
+$dompdf->stream("Trabajadores.pdf", array("Attachment" => false));
 ?>

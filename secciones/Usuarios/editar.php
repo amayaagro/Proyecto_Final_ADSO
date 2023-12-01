@@ -42,45 +42,40 @@ if ($_POST) {
 <!-- Header -->
 <?php include("../../templates/header.php"); ?>
 
-<!-- Herramienta Accesibilidad -->
-<script>
-    (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "fFgZ6B1nWP");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        s.setAttribute('locale', 'es');
-        (d.body || d.head).appendChild(s);
-    })(document)
-</script>
-
 <br />
 <!-- Formulario Editar Usuario -->
 <div class="card">
     <div class="content">
         <div class="title">
-            <h2 id="Titulo"><strong>Editar Datos Usuario</strong><img src="../../Img/Logo.png" width="230" height="80" align="right"></h2>
+            <h2 id="Titulo"><strong>Editar Datos Usuario</strong><img src="../../Img/Logo.png" width="230" height="80"
+                    align="right"></h2>
         </div>
         <div class="card-body">
             <form action="" method="post" class="form" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="txtId" class="form-label">Id</label>
-                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId" id="txtId" aria-describedby="helpId" placeholder="ID">
+                    <input type="number" value="<?php echo $txtId; ?>" class="form-control" readonly name="txtId"
+                        id="txtId" aria-describedby="helpId" placeholder="ID">
                 </div>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" value="<?php echo $nombre; ?>" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre">
+                    <input type="text" value="<?php echo $nombre; ?>" class="form-control" name="nombre" id="nombre"
+                        aria-describedby="helpId" placeholder="Ingrese el nombre">
                 </div>
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
-                    <input type="email" value="<?php echo $correo; ?>" class="form-control" name="correo" id="correo" aria-describedby="helpId" placeholder="Ingrese el correo">
+                    <input type="email" value="<?php echo $correo; ?>" class="form-control" name="correo" id="correo"
+                        aria-describedby="helpId" placeholder="Ingrese el correo">
                 </div>
                 <div class="mb-3">
                     <label for="nombreusuario" class="form-label">Nombre de usuario</label>
-                    <input type="text" value="<?php echo $usuario; ?>" class="form-control" name="nombreusuario" id="nombreusuario" aria-describedby="helpId" placeholder="Ingrese el nombre de usuario">
+                    <input type="text" value="<?php echo $usuario; ?>" class="form-control" name="nombreusuario"
+                        id="nombreusuario" aria-describedby="helpId" placeholder="Ingrese el nombre de usuario">
                 </div>
                 <div class="mb-3">
                     <label for="contraseña" class="form-label">Contraseña</label>
-                    <input type="password" value="<?php echo $password; ?>" class="form-control" name="contraseña" id="contraseña" aria-describedby="helpId" placeholder="Ingrese la contraseña">
+                    <input type="password" value="<?php echo $password; ?>" class="form-control" name="contraseña"
+                        id="contraseña" aria-describedby="helpId" placeholder="Ingrese la contraseña">
                 </div>
                 </br>
                 <button type="submit" id="guardar" title="Actualizar" class="btn">Actualizar</button>
@@ -96,3 +91,14 @@ if ($_POST) {
 
 <!-- Social footer -->
 <?php include("../../templates/socfooter.php"); ?>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>

@@ -17,7 +17,6 @@
             (d.body || d.head).appendChild(s);
         })(document)
     </script>
-
 </head>
 
 <!-- Cuerpo página -->
@@ -42,3 +41,14 @@
 </body>
 
 </html>
+
+<!-- Herramienta Accesibilidad -->
+<script>
+(function(d) {
+    var s = d.createElement("script");
+    s.setAttribute("data-account", "fFgZ6B1nWP");
+    s.setAttribute("src", "https://cdn.userway.org/widget.js");
+    s.setAttribute('locale', 'es');
+    (d.body || d.head).appendChild(s);
+})(document)
+</script>
