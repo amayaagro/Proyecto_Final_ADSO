@@ -1,6 +1,8 @@
+<!-- Página Crear Herramienta -->
+
 <!-- SQL Crear Herramienta -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM trabajadores WHERE Estado = 1");
 $sentencia->execute();
@@ -35,7 +37,7 @@ if ($_POST) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Formulario Crear Herramienta -->
@@ -95,10 +97,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

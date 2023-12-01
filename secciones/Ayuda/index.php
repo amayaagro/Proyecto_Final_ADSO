@@ -1,6 +1,7 @@
+<!-- Página Ayuda -->
 <!-- Conexión -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 ?>
 
 <!-- Página Ayuda -->

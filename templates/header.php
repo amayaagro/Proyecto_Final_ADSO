@@ -1,3 +1,4 @@
+<!-- Header -->
 <?php 
     session_start();
     $urlBase ="http://localhost:80/kahwa/";

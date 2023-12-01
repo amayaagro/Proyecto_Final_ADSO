@@ -1,6 +1,8 @@
-<!-- SQL Editar Herramienta -->
+<!-- Página Editar Asignar Labor -->
+
+<!-- SQL Editar Asignar Labor -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM finca WHERE Estado = 1");
 $sentencia->execute();
@@ -134,10 +136,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

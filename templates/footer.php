@@ -1,3 +1,4 @@
+<!-- Footer -->
 <p></p>
     <link rel="stylesheet" href="http://localhost/kahwa/Css/Styles.css" />
     <!-- Bootstrap JavaScript Libraries -->

@@ -1,6 +1,8 @@
+<!-- Página Labores -->
+
 <!-- SQL Labores -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentecia = $conexion->prepare("SELECT * FROM `labores`");
 $sentecia->execute();
@@ -35,7 +37,7 @@ if (isset($_GET['txtID'])) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Contenedor Datos Labores -->
@@ -83,10 +85,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

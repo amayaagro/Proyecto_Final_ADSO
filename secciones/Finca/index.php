@@ -1,6 +1,8 @@
+<!-- Página Finca -->
+
 <!-- SQL FincaHerramientas -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM `finca`");
 $sentencia->execute();
@@ -32,7 +34,7 @@ if (isset($_GET['txtID'])) {
     header("Location:index.php?mensaje=" . $mensaje);
 }
 ?>
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Contenedor Datos Finca -->
@@ -98,10 +100,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

@@ -1,6 +1,8 @@
+<!-- Página Editar Trabajador -->
+
 <!-- SQL Editar Trabajador -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 if ($_GET['txtID']) {
     $txtId = (isset($_GET['txtID']) ? $_GET['txtID'] : "");
@@ -48,7 +50,7 @@ if ($_POST) {
     header("Location:index.php?mensaje=" . $mensaje);
 }
 ?>
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Formulario Editar Trabajador -->
@@ -106,10 +108,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

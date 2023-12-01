@@ -1,3 +1,4 @@
+<!-- Social Footer -->
 <footer class="text-left text-black fixed-bottom">
 
     <!-- Seccion Redes Sociales -->

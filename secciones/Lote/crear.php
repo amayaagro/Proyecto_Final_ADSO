@@ -1,6 +1,8 @@
+<!-- Página Crear Lote -->
+
 <!-- SQL Crear Lote -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM cultivo");
 $sentencia->execute();
@@ -34,7 +36,7 @@ if ($_POST) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Formulario Crear Lote -->
@@ -88,10 +90,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

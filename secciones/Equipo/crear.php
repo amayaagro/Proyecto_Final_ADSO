@@ -1,6 +1,7 @@
+<!-- Página Crear Equipo -->
 <!-- SQL Crear Equipo -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM trabajadores WHERE Estado = 1");
 $sentencia->execute();
@@ -33,9 +34,10 @@ if ($_POST) {
     header("Location:index.php?mensaje=" . $mensaje);
 }
 ?>
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
+
 <!-- Formulario Crear Equipo -->
 <div class="card">
     <div class="content">
@@ -92,11 +94,12 @@ if ($_POST) {
     </div>
 </div>
 </div>
+
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include"../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

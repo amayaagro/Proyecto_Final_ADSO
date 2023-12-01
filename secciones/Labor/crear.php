@@ -1,6 +1,8 @@
+<!-- Página Crear Labor -->
+
 <!-- SQL Crear Labor -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 if ($_POST) {
     $labor = (isset($_POST['labor']) ? $_POST['labor'] : "");
     $descripcion = (isset($_POST['descripcion']) ? $_POST['descripcion'] : "");
@@ -17,7 +19,7 @@ if ($_POST) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Formulario Crear Labor -->
@@ -48,10 +50,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

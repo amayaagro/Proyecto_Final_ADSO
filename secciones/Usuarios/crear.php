@@ -1,6 +1,8 @@
-<!-- SQL Crear Finca -->
+<!-- Página Crear Usuario -->
+
+<!-- SQL Crear Usuario -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 if ($_POST) {
     $nombre = (isset($_POST['nombre']) ? $_POST['nombre'] : "");
@@ -22,7 +24,7 @@ if ($_POST) {
 }
 ?>
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br>
 <!-- Formulario Crear Usuario -->
@@ -64,10 +66,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

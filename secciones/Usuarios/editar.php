@@ -1,6 +1,8 @@
+<!-- Página Editar Usuario -->
+
 <!-- SQL Editar Finca -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 if ($_GET['txtID']) {
     $txtId = (isset($_GET['txtID']) ? $_GET['txtID'] : "");
@@ -87,10 +89,10 @@ if ($_POST) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

@@ -1,6 +1,8 @@
+<!-- Página Editar Pagos -->
+
 <!-- SQL Editar Pagos -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT * FROM trabajadores WHERE Estado = 1");
 $sentencia->execute();
@@ -120,10 +122,10 @@ function CalcularTotal() {
 </script>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

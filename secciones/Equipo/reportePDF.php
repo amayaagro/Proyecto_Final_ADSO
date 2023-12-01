@@ -28,7 +28,7 @@ ob_start();
 
 <body>
     <?php
-    include("../../bd.php");
+    include "../../bd.php";
 
     $sentecia = $conexion->prepare("SELECT *, (SELECT Nombre FROM trabajadores where trabajadores.Id = equipo.Responsable) as empleado
     FROM equipo");

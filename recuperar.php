@@ -1,4 +1,5 @@
-<?php require("bd.php"); ?>
+<!-- Página Recuperar Contraseña -->
+<?php require "bd.php"; ?>
 
 <!-- Página Registrar Usuario -->
 <!DOCTYPE html>
@@ -47,7 +48,7 @@
 </html>
 
 <!-- Footer -->
-<?php include("templates/footer.php"); ?>
+<?php include "templates/footer.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

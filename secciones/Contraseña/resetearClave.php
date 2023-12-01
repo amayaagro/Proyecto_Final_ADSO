@@ -1,4 +1,4 @@
-<?php require("../../bd.php"); ?>
+<?php require "../../bd.php"; ?>
 
 <!-- SQL Recuperar contraseña -->
 <?php

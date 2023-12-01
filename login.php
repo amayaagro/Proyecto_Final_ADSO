@@ -1,8 +1,11 @@
+<!-- Página Inicio Sesión -->
 <!-- SQL Inicio Sesión -->
 <?php
 session_start();
 if ($_POST) {
-    include("bd.php");
+
+    include "bd.php";
+    
     $correo = (isset($_POST['correo']) ? $_POST['correo'] : "");
     $password = (isset($_POST['password']) ? $_POST['password'] : "");
 

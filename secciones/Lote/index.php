@@ -1,6 +1,8 @@
-<!-- SQL Labores -->
+<!-- Página Lotes -->
+
+<!-- SQL Lotes -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentencia = $conexion->prepare("SELECT *, (SELECT Nombredelpredio FROM finca where finca.id = lote.FincaAsociada) as fincaregistrada,
     (SELECT Cultivo FROM cultivo where cultivo.id = lote.Cultivo) as cultivosembrado
@@ -35,7 +37,7 @@ if (isset($_GET['txtID'])) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Contenedor Datos Lotes -->
@@ -89,10 +91,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

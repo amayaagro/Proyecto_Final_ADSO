@@ -34,7 +34,7 @@ ob_start();
     <!-- Tabla Labores -->
     <?php
 
-    include("../../bd.php");
+    include "../../bd.php";
 
     $sentencia = $conexion->prepare("SELECT *, (SELECT Nombre FROM trabajadores where trabajadores.Id = plantillalabores.Encargado) as empleado,
 (SELECT Nombredelpredio FROM finca where finca.id = plantillalabores.Finca) as FincaDeTrabajo,

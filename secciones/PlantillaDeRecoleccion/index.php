@@ -1,6 +1,8 @@
+<!-- Página Recolección -->
+
 <!-- SQL Recolección -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentecia = $conexion->prepare("SELECT *, (SELECT Nombre FROM trabajadores where trabajadores.Id = planilladerecoleccion.Responsable) as empleado
     FROM planilladerecoleccion");
@@ -97,10 +99,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>.
+<?php include "../../templates/footer.php"; ?>.
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

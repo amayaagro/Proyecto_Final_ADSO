@@ -1,6 +1,8 @@
+<!-- Pagina Registro Usuario -->
 <!-- SQL Registro Usuario -->
 <?php
-include("bd.php");
+
+include "bd.php";
 
 if ($_POST) {
     $nombre = (isset($_POST['nombre']) ? $_POST['nombre'] : "");
@@ -93,7 +95,7 @@ if ($_POST) {
 </html>
 
 <!-- Footer -->
-<?php include("templates/footer.php"); ?>
+<?php include "templates/footer.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

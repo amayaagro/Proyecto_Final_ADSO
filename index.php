@@ -1,4 +1,5 @@
-<?php include("templates/header.php"); ?>
+<!-- Pagina Inicio -->
+<?php include "templates/header.php"; ?>
 
 <br /><br />
 <!-- Formulario Inicio -->
@@ -19,10 +20,10 @@
 <br /><br />
 <br /><br />
 <!-- Footer -->
-<?php include("templates/footer.php"); ?>
+<?php include "templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("templates/socfooter.php"); ?>
+<?php include "templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

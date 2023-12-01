@@ -32,7 +32,7 @@ ob_start();
 <body>
     <?php
 
-    include('../../bd.php');
+    include '../../bd.php';
 
     $sentencia = $conexion->prepare("SELECT * FROM `trabajadores`");
     $sentencia->execute();

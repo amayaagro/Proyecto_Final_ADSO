@@ -1,6 +1,8 @@
+<!-- Página Herramientas -->
+
 <!-- SQL Herramientas -->
 <?php
-include("../../bd.php");
+include "../../bd.php";
 
 $sentecia = $conexion->prepare("SELECT *, (SELECT Nombre FROM trabajadores where trabajadores.Id = herramientas.Responsable) as empleado
     FROM herramientas");
@@ -36,7 +38,7 @@ if (isset($_GET['txtID'])) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Contenedor Datos Herramienta -->
@@ -96,10 +98,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>

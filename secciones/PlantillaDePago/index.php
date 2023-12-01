@@ -1,3 +1,5 @@
+<!-- Página Pagos -->
+
 <!-- SQL Pagos -->
 <?php
 include("../../bd.php");
@@ -35,7 +37,7 @@ if (isset($_GET['txtID'])) {
 ?>
 
 <!-- Header -->
-<?php include("../../templates/header.php"); ?>
+<?php include "../../templates/header.php"; ?>
 
 <br />
 <!-- Contenedor Datos Insumos -->
@@ -92,10 +94,10 @@ if (isset($_GET['txtID'])) {
 </div>
 
 <!-- Footer -->
-<?php include("../../templates/footer.php"); ?>
+<?php include "../../templates/footer.php"; ?>
 
 <!-- Social Footer -->
-<?php include("../../templates/socfooter.php"); ?>
+<?php include "../../templates/socfooter.php"; ?>
 
 <!-- Herramienta Accesibilidad -->
 <script>
